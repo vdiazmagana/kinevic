@@ -627,7 +627,7 @@
 </div>
 
 <script>
-  (function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var bubble = document.getElementById('waBubble');
     var btn    = document.getElementById('waBtn');
     var shown  = false;
@@ -644,7 +644,7 @@
         shown = false;
       }
     }, { passive: true, once: true });
-  })();
+  });
 </script>
 </body>
 </html>
