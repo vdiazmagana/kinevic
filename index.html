@@ -1449,6 +1449,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:1.5rem; }
     .footer-bottom .footer-text { font-size:0.72rem; color:rgba(255,255,255,0.25); margin-left:0; }
     @media(max-width:768px){ .footer-cols{ grid-template-columns:1fr; gap:2rem; } .footer-brand{ max-width:none; } }
+
+    /* ============================================================
+       LEGIBILIDAD GLOBAL — textos más grandes y mejor contraste
+    ============================================================ */
+
+    /* Hero */
+    .hero-sub { font-size: 1.12rem; line-height: 1.85; color: #4a5568; }
+    .hero-card-benefit { font-size: 0.86rem; color: #5a6474; }
+
+    /* Subtítulos de sección */
+    .section-sub { font-size: 1.08rem; line-height: 1.8; color: #5a6474; }
+    #servicios .section-sub, #planes .section-sub, #contacto .section-sub { color: rgba(255,255,255,0.62); }
+
+    /* Servicios */
+    .service-name { font-size: 1.08rem; }
+    .service-desc { font-size: 0.93rem; line-height: 1.75; color: rgba(255,255,255,0.66); }
+
+    /* Planes */
+    .plan-sessions { font-size: 0.88rem; color: rgba(255,255,255,0.6); }
+    .plan-period { font-size: 0.84rem; color: rgba(255,255,255,0.55); }
+    .plan-features li { font-size: 0.92rem; color: rgba(255,255,255,0.72); }
+    .plan-ideal { font-size: 0.84rem; color: rgba(255,255,255,0.55); }
+    .planes-category-desc { font-size: 0.95rem; color: rgba(255,255,255,0.55); }
+    .planes-trust { font-size: 0.9rem; color: rgba(255,255,255,0.55); }
+    .plan-fonasa-features li { font-size: 0.92rem !important; color: rgba(255,255,255,0.78) !important; }
+
+    /* Especialistas */
+    .equipo-body { font-size: 1rem; line-height: 1.9; }
+
+    /* Centro */
+    .centro-benefit { font-size: 0.92rem; }
+
+    /* Casos / testimonios */
+    .case-quote { font-size: 0.98rem; line-height: 1.75; }
+    .case-author { font-size: 0.8rem; }
+    .caso-javier-desc { font-size: 0.95rem; line-height: 1.75; color: #e2e8f0; }
+
+    /* Cómo trabajamos */
+    .step-title { font-size: 1.02rem; }
+    .step-desc { font-size: 0.92rem; line-height: 1.6; color: rgba(255,255,255,0.72); }
+    .agenda-note { font-size: 0.9rem; color: rgba(255,255,255,0.72); }
+
+    /* Franja Fonasa */
+    .fonasa-strip-text strong { font-size: 1.35rem; }
+    .fonasa-strip-text span { font-size: 1rem; color: #4a5568; line-height: 1.6; }
+    .fonasa-strip-text span span { font-size: 0.92rem !important; }
+
+    /* Contacto */
+    .contact-value { font-size: 0.98rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .contact-label { font-size: 0.74rem; }
+
+    /* Footer */
+    .footer-link { font-size: 0.92rem; color: rgba(255,255,255,0.62); }
+    .footer-desc { font-size: 0.9rem; line-height: 1.7; }
+
+    /* Mobile — mantener proporción legible */
+    @media(max-width: 600px) {
+      .hero-sub { font-size: 1.05rem; }
+      .section-sub { font-size: 1rem; }
+      .service-desc, .plan-features li { font-size: 0.95rem; }
+    }
   </style>
 </head>
 <body> 
