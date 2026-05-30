@@ -1394,6 +1394,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         box-sizing: border-box;
       }
     }
+
+    /* Cómo trabajamos — CTA title */
+    .agenda-cta-title { font-family:'Montserrat',sans-serif; font-size:1.15rem; font-weight:800; color:#fff; margin-bottom:0.4rem; letter-spacing:-0.015em; }
+    .agenda-cta-sub { font-size:0.88rem; color:rgba(255,255,255,0.78); line-height:1.6; margin-bottom:1.1rem; font-weight:300; }
+
+    /* === SERVICIOS — Más solicitados (acceso rápido) === */
+    .servicios-featured-label {
+      font-family:'Montserrat',sans-serif; font-size:0.7rem; font-weight:700;
+      letter-spacing:0.16em; text-transform:uppercase; color:var(--teal);
+      margin-bottom:1rem; display:flex; align-items:center; gap:0.6rem;
+    }
+    .servicios-featured-label::before { content:''; width:18px; height:1px; background:rgba(91,184,196,0.5); }
+    .servicios-featured {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:3rem;
+    }
+    .featured-item {
+      display:flex; align-items:center; gap:0.85rem;
+      background:rgba(91,184,196,0.07); border:1px solid rgba(91,184,196,0.22);
+      border-radius:12px; padding:1.15rem 1.35rem; text-decoration:none;
+      transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .featured-item:hover {
+      background:rgba(91,184,196,0.14); border-color:rgba(91,184,196,0.45);
+      transform:translateY(-4px); box-shadow:0 12px 32px rgba(91,184,196,0.14);
+    }
+    .featured-item--fonasa { background:rgba(91,184,196,0.13); border-color:rgba(91,184,196,0.4); }
+    .featured-icon { font-size:1.6rem; line-height:1; flex-shrink:0; }
+    .featured-name {
+      font-family:'Montserrat',sans-serif; font-size:0.92rem; font-weight:700;
+      color:rgba(255,255,255,0.95); letter-spacing:-0.01em; line-height:1.2;
+    }
+    .servicios-all-label {
+      font-family:'Montserrat',sans-serif; font-size:0.7rem; font-weight:700;
+      letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.4);
+      margin-bottom:1rem; display:flex; align-items:center; gap:0.6rem;
+    }
+    .servicios-all-label::before { content:''; width:18px; height:1px; background:rgba(255,255,255,0.15); }
+    @media(max-width:900px){ .servicios-featured{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:480px){ .servicios-featured{ grid-template-columns:1fr; } }
+
+    /* === FOOTER enriquecido === */
+    footer { background:#060C0C; border-top:1px solid rgba(255,255,255,0.06); padding:3.5rem 5vw 2rem; display:block; }
+    .footer-cols { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+    .footer-brand { max-width:340px; }
+    .footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.4); line-height:1.7; margin:1rem 0 1.1rem; font-weight:300; }
+    .footer-badge { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.74rem; font-weight:600; color:var(--teal); background:rgba(91,184,196,0.1); border:1px solid rgba(91,184,196,0.25); border-radius:100px; padding:0.35rem 0.9rem; }
+    .footer-col-title { font-family:'Montserrat',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:1.1rem; }
+    .footer-link { display:block; font-size:0.83rem; color:rgba(255,255,255,0.5); text-decoration:none; line-height:1.5; margin-bottom:0.7rem; transition:color 0.2s; }
+    a.footer-link:hover { color:var(--teal); }
+    .footer-link--static { cursor:default; }
+    .footer-cta { display:inline-flex; align-items:center; margin-top:0.4rem; background:var(--teal); color:#fff; font-size:0.8rem; font-weight:700; letter-spacing:0.02em; padding:0.7rem 1.4rem; border-radius:7px; text-decoration:none; box-shadow:0 4px 16px rgba(91,184,196,0.3); transition:all 0.25s cubic-bezier(0.4,0,0.2,1); }
+    .footer-cta:hover { background:var(--teal-dark); transform:translateY(-2px); box-shadow:0 8px 24px rgba(91,184,196,0.45); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:1.5rem; }
+    .footer-bottom .footer-text { font-size:0.72rem; color:rgba(255,255,255,0.25); margin-left:0; }
+    @media(max-width:768px){ .footer-cols{ grid-template-columns:1fr; gap:2rem; } .footer-brand{ max-width:none; } }
   </style>
 </head>
 <body> 
@@ -1423,7 +1478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-text">
     <span class="hero-tag">Kinesiólogo en Talca · Brisas del Centro</span>
     <h1>Centro de<br>Rehabilitación<br>en <em>Talca</em></h1>
-    <p class="hero-sub">Atención kinesiológica personalizada 1 a 1. Rehabilitación deportiva, post-quirúrgica y manejo del dolor. Cobertura Fonasa y particular.</p>
+    <p class="hero-sub"><strong style="color:#1A1A1A;font-weight:700;">Recupera tu movimiento con atención personalizada 1 a 1.</strong> Rehabilitación basada en evidencia, ejercicio terapéutico y atención kinésica en Talca. Cobertura Fonasa y particular.</p>
     <div class="hero-btns">
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-primary">Agendar hora →</a>
       <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Kinevic" target="_blank" class="btn-outline">WhatsApp</a>
@@ -1432,27 +1487,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-cards">
 
     <div class="hero-card">
-      <div class="hero-card-icon">⏱️</div>
-      <div class="hero-card-value">40 min</div>
-      <div class="hero-card-benefit">Tiempo dedicado exclusivamente a ti</div>
+      <div class="hero-card-icon">⭐</div>
+      <div class="hero-card-value">74+</div>
+      <div class="hero-card-benefit">Reseñas positivas en Google</div>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-icon">⭐</div>
-      <div class="hero-card-value">74+</div>
-      <div class="hero-card-benefit">Pacientes nos recomiendan</div>
+      <div class="hero-card-icon">👤</div>
+      <div class="hero-card-value">1 a 1</div>
+      <div class="hero-card-benefit">Atención personalizada</div>
     </div>
 
     <div class="hero-card hero-card--accent">
       <div class="hero-card-icon">🏥</div>
-      <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Fonasa disponible</div>
-      <div class="hero-card-benefit">Bono gestionado en consulta</div>
+      <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Bono Fonasa</div>
+      <div class="hero-card-benefit">Disponible en consulta</div>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-icon">📲</div>
-      <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Agenda rápida</div>
-      <div class="hero-card-benefit">Reserva online o por WhatsApp</div>
+      <div class="hero-card-icon">📍</div>
+      <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Talca Centro</div>
+      <div class="hero-card-benefit">Brisas del Centro</div>
     </div>
 
   </div>
@@ -1463,6 +1518,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="section-tag reveal">Lo que tratamos</p>
   <h2 class="section-title reveal">Servicios</h2>
   <p class="section-sub reveal">Desde lesiones agudas hasta rehabilitación de alto rendimiento. Cada plan diseñado para tu caso.</p>
+
+  <!-- MÁS SOLICITADOS -->
+  <p class="servicios-featured-label reveal">Servicios más solicitados</p>
+  <div class="servicios-featured reveal">
+    <a href="#planes" class="featured-item">
+      <span class="featured-icon">🏃</span>
+      <span class="featured-name">Rehabilitación deportiva</span>
+    </a>
+    <a href="#planes" class="featured-item">
+      <span class="featured-icon">🦴</span>
+      <span class="featured-name">Dolor lumbar y columna</span>
+    </a>
+    <a href="#planes" class="featured-item">
+      <span class="featured-icon">🔧</span>
+      <span class="featured-name">Rehabilitación postquirúrgica</span>
+    </a>
+    <a href="#planes" class="featured-item featured-item--fonasa">
+      <span class="featured-icon">🏥</span>
+      <span class="featured-name">Atención Fonasa</span>
+    </a>
+  </div>
+
+  <p class="servicios-all-label reveal">Todos nuestros servicios</p>
   <div class="services-grid reveal">
     <div class="service-item">
       <span class="service-icon">🦴</span>
@@ -1644,10 +1722,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="section-title reveal">Un espacio diseñado<br>para tu recuperación</h2>
   <p class="section-sub reveal">Contamos con espacios diseñados para evaluación, rehabilitación y ejercicio terapéutico, permitiendo acompañarte en cada etapa de tu recuperación.</p>
   <div class="centro-benefits reveal">
-    <div class="centro-benefit"><span>🏋️</span><span>Área de ejercicio terapéutico</span></div>
-    <div class="centro-benefit"><span>🏥</span><span>Atención personalizada</span></div>
-    <div class="centro-benefit"><span>📍</span><span>Talca Centro</span></div>
-    <div class="centro-benefit"><span>🅿️</span><span>Fácil acceso</span></div>
+    <div class="centro-benefit"><span>🏋️</span><span>Área equipada para ejercicio terapéutico</span></div>
+    <div class="centro-benefit"><span>🏥</span><span>Atención personalizada 1 a 1</span></div>
+    <div class="centro-benefit"><span>📍</span><span>Ubicación céntrica en Talca</span></div>
+    <div class="centro-benefit"><span>🅿️</span><span>Acceso y estacionamiento cercano</span></div>
   </div>
   <div class="gallery-grid reveal">
     <div class="gallery-item g-main">
@@ -1691,9 +1769,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Bono disponible en consulta</li>
         <li>Atención personalizada 1 a 1</li>
         <li>Evaluación inicial incluida</li>
-        <li>Cobertura con seguro de salud estatal</li>
+        <li>Seguimiento profesional</li>
       </ul>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-plan btn-fonasa-cta" style="white-space:nowrap;">Reservar atención Fonasa →</a>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-plan btn-fonasa-cta" style="white-space:nowrap;">Agendar evaluación →</a>
     </div>
   </div>
 
@@ -1718,7 +1796,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Consultar →</a>
     </div>
     <div class="plan-card featured plan-card--recommended">
-      <div class="plan-recommended-badge">✦ Recomendado</div>
+      <div class="plan-recommended-badge">★ Más popular</div>
       <div class="plan-name">KINEVIC CORE</div>
       <div class="plan-sessions">2 sesiones por semana</div>
       <div class="plan-price">$85.000<span>/mes</span></div>
@@ -1806,16 +1884,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- AGENDAR -->
 <section id="agendar">
-  <p class="section-tag reveal">Empieza hoy</p>
-  <h2 class="section-title reveal" style="color:var(--white)">Agenda tu hora</h2>
+  <p class="section-tag reveal">Nuestro proceso</p>
+  <h2 class="section-title reveal" style="color:var(--white)">Cómo trabajamos</h2>
   <div class="agenda-grid reveal">
     <div>
-      <div class="agenda-step"><div class="step-num">1</div><div><div class="step-title">Escríbenos o agenda online</div><div class="step-desc">Cuéntanos tu situación o usa nuestro sistema de agendamiento en línea.</div></div></div>
-      <div class="agenda-step"><div class="step-num">2</div><div><div class="step-title">Evaluación kinesiológica completa</div><div class="step-desc">Tu primera sesión es una evaluación en profundidad — no tratamos sin entender primero.</div></div></div>
+      <div class="agenda-step"><div class="step-num">1</div><div><div class="step-title">Evaluación inicial</div><div class="step-desc">Escuchamos tu caso y realizamos una evaluación en profundidad — no tratamos sin entender primero.</div></div></div>
+      <div class="agenda-step"><div class="step-num">2</div><div><div class="step-title">Diagnóstico funcional</div><div class="step-desc">Identificamos la causa real de tu dolor o limitación, no solo el síntoma.</div></div></div>
       <div class="agenda-step"><div class="step-num">3</div><div><div class="step-title">Plan personalizado</div><div class="step-desc">Diseñamos un plan a tu medida. Sin protocolos genéricos, sin turnos masivos.</div></div></div>
+      <div class="agenda-step"><div class="step-num">4</div><div><div class="step-title">Seguimiento y progresión</div><div class="step-desc">Acompañamos tu recuperación etapa a etapa, ajustando el plan según tus avances.</div></div></div>
     </div>
     <div class="agenda-cta">
-      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-white">Agendar hora online →</a>
+      <p class="agenda-cta-title">¿Listo para comenzar tu recuperación?</p>
+      <p class="agenda-cta-sub">Agenda una evaluación y recibe un plan personalizado según tus objetivos.</p>
+      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-white">Agendar evaluación →</a>
       <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Kinevic" target="_blank" class="btn-white-outline">Escribir por WhatsApp</a>
       <p class="agenda-note">📍 Brisas del Centro · Talca · Atención Fonasa y particular</p>
     </div>
@@ -1832,7 +1913,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $83.360 · 10 sesiones de kinesiología
     </span>
   </div>
-  <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-primary">Consultar disponibilidad</a>
+  <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-primary">Agendar evaluación</a>
 </div>
 
 <!-- CONTACTO -->
@@ -1858,13 +1939,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <footer>
-  
-  <div class="footer-logo-text">
-    <span class="footer-logo-name">KINEVIC</span>
-    <span class="footer-logo-tagline">Centro de Kinesiología · Talca</span>
+  <div class="footer-cols">
+    <div class="footer-brand">
+      <div class="footer-logo-text">
+        <span class="footer-logo-name">KINEVIC</span>
+        <span class="footer-logo-tagline">Centro de Kinesiología · Talca</span>
+      </div>
+      <p class="footer-desc">Rehabilitación basada en evidencia, ejercicio terapéutico y atención kinésica personalizada 1 a 1.</p>
+      <span class="footer-badge">🏥 Atención Fonasa y particular</span>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contacto</p>
+      <a href="https://maps.google.com/?q=Calle+1+Norte+1209+Brisas+Del+Centro+Talca" target="_blank" class="footer-link">📍 Calle 1 Norte 1209, Brisas del Centro, Talca</a>
+      <a href="https://wa.me/56966631822" target="_blank" class="footer-link">📞 +56 9 6663 1822</a>
+      <a href="https://instagram.com/kinevic.cl" target="_blank" class="footer-link">📸 @kinevic.cl</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Horario</p>
+      <span class="footer-link footer-link--static">🕐 Lunes a viernes · 10:00 – 20:00</span>
+      <span class="footer-link footer-link--static">📅 Sábado según disponibilidad</span>
+      <a href="https://g.page/r/kinevic" target="_blank" class="footer-link">⭐ 5.0 · 74 opiniones en Google</a>
+      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="footer-cta">Agendar evaluación →</a>
+    </div>
   </div>
-  <span class="footer-text">© 2025 Kinevic – Centro de Rehabilitación y Ejercicio Físico · Talca, Chile</span>
-  <span class="footer-right">⭐ 5.0 · 74 opiniones Google</span>
+  <div class="footer-bottom">
+    <span class="footer-text">© 2025 Kinevic – Centro de Rehabilitación y Ejercicio Físico · Talca, Chile</span>
+  </div>
 </footer>
 
 <script>
@@ -1878,9 +1978,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll('.nav-links a').forEach(a=>{ a.style.color=a.getAttribute('href')==='#'+cur?'var(--teal)':''; });
   });
 </script>
-... (resto de tu contenido) ...
-
-    <!-- bloque del botón WhatsApp aquí -->
+    <!-- Botón flotante WhatsApp -->
 
 <a href="https://wa.me/56996631822?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Kinevic%20y%20agendar%20una%20hora" target="_blank" rel="noopener" style="position:fixed;bottom:20px;right:20px;z-index:2147483647;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.5);text-decoration:none;">
   <svg width="30" height="30" viewBox="0 0 24 24" style="fill:#ffffff;display:block;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
