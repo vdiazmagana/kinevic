@@ -1671,6 +1671,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .plan-card--recommended:hover { transform: translateY(-5px) !important; }
       .planes-help { font-size: 0.95rem; }
     }
+
+    /* ============================================================
+       DEPORTISTAS KINEVIC — autoridad y rendimiento deportivo
+    ============================================================ */
+    #deportistas { background: #F7FAFA; padding: 7rem 5vw; }
+    .deportistas-title { color: #1a1a1a; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.9rem; }
+    .deportistas-sub { font-size: 1.05rem; font-weight: 400; color: #4b5563; line-height: 1.8; max-width: 700px; margin-bottom: 3.5rem; }
+    .deportistas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.25rem; align-items: stretch; }
+    .atleta-card {
+      background: #fff;
+      border: 1px solid rgba(91,184,196,0.16);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.35s;
+    }
+    .atleta-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 56px rgba(0,0,0,0.13), 0 6px 16px rgba(0,0,0,0.06);
+      border-color: rgba(91,184,196,0.4);
+    }
+    .atleta-foto { position: relative; overflow: hidden; height: 340px; }
+    .atleta-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+    .atleta-card:hover .atleta-foto img { transform: scale(1.05); }
+    .atleta-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.28) 0%, transparent 45%); pointer-events: none; }
+    #deportistas .atleta-foto img[src*="rosario"] { object-position: center 28%; }
+    .atleta-badge {
+      position: absolute; top: 1rem; left: 1rem; z-index: 2;
+      font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #fff; background: var(--teal);
+      padding: 0.4rem 0.9rem; border-radius: 100px;
+      box-shadow: 0 4px 14px rgba(91,184,196,0.45);
+    }
+    .atleta-body { padding: 1.9rem 1.9rem 2rem; display: flex; flex-direction: column; flex: 1; }
+    .atleta-nombre { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; }
+    .atleta-disciplina { font-size: 0.82rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 0.25rem; margin-bottom: 1.1rem; }
+    .atleta-titulo { font-family: 'Montserrat', sans-serif; font-size: 1.12rem; font-weight: 800; color: #1a1a1a; line-height: 1.3; letter-spacing: -0.015em; margin-bottom: 0.85rem; }
+    .atleta-texto { font-size: 0.93rem; font-weight: 300; color: #5a6474; line-height: 1.8; margin-bottom: 0.9rem; }
+    .atleta-check {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.85rem; font-weight: 700; color: var(--teal-dark);
+      background: rgba(91,184,196,0.1); border: 1px solid rgba(91,184,196,0.22);
+      border-radius: 8px; padding: 0.6rem 0.9rem; margin: 0.5rem 0 1.5rem;
+      align-self: flex-start;
+    }
+    .atleta-check::before { content: '✓'; color: var(--teal); font-weight: 800; }
+    .atleta-cta {
+      margin-top: auto; align-self: flex-start;
+      background: var(--teal); color: #fff;
+      padding: 0.85rem 1.9rem; border-radius: 8px;
+      font-size: 0.88rem; font-weight: 700; letter-spacing: 0.02em;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(91,184,196,0.35);
+      transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+    .atleta-cta:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(91,184,196,0.5); }
+    .deportistas-nota {
+      text-align: center; max-width: 800px; margin: 3rem auto 0;
+      font-size: 0.95rem; font-weight: 300; color: #6b7280; line-height: 1.8;
+    }
+    @media(max-width: 860px) {
+      #deportistas { padding: 5rem 5vw; }
+      .deportistas-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .atleta-foto { height: 300px; }
+    }
+
   </style>
 <script type="application/ld+json">
 {
@@ -1710,6 +1778,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "10:00",
       "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "10:00",
+      "closes": "13:00"
     }
   ],
   "sameAs": ["https://instagram.com/kinevic.cl"],
@@ -1751,6 +1825,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="#equipo">Especialistas</a></li>
     <li><a href="#planes">Planes</a></li>
     <li><a href="#casos">Casos</a></li>
+    <li><a href="#deportistas">Deportistas</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="nav-cta">Agendar hora</a></li>
   </ul>
@@ -2220,6 +2295,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-primary">Agendar evaluación</a>
 </div>
 
+<!-- DEPORTISTAS KINEVIC -->
+<section id="deportistas">
+  <p class="section-tag reveal">Autoridad deportiva local</p>
+  <h2 class="section-title deportistas-title reveal">Deportistas Kinevic</h2>
+  <p class="deportistas-sub reveal">Deportistas que confían en nuestro trabajo para recuperarse, prevenir lesiones y seguir avanzando en sus objetivos deportivos.</p>
+
+  <div class="deportistas-grid reveal">
+
+    <!-- Javier -->
+    <article class="atleta-card">
+      <div class="atleta-foto">
+        <img src="img/athlete-javier.jpg" alt="Javier Valenzuela, corredor elite de downhill, en competencia tras su rehabilitación en Kinevic Talca" loading="lazy" />
+        <span class="atleta-badge">Recuperación deportiva</span>
+      </div>
+      <div class="atleta-body">
+        <div class="atleta-nombre">Javier Valenzuela</div>
+        <div class="atleta-disciplina">Corredor Elite de Downhill</div>
+        <h3 class="atleta-titulo">Retorno deportivo después de una lesión compleja</h3>
+        <p class="atleta-texto">Tras sufrir una fractura de ambas muñecas, Javier realizó su proceso de rehabilitación en Kinevic con el objetivo de volver a competir al más alto nivel.</p>
+        <p class="atleta-texto">Hoy se encuentra nuevamente entrenando y participando en competencias de downhill, demostrando que una recuperación bien guiada puede marcar la diferencia.</p>
+        <div class="atleta-check">Retorno a la competencia</div>
+        <a href="#casos" class="atleta-cta">Ver historia →</a>
+      </div>
+    </article>
+
+    <!-- Rosario -->
+    <article class="atleta-card">
+      <div class="atleta-foto">
+        <img src="img/athlete-rosario.jpg" alt="Rosario Alvayay, deportista de escalada, en entrenamiento de rendimiento con Kinevic Talca" loading="lazy" />
+        <span class="atleta-badge">Rendimiento deportivo</span>
+      </div>
+      <div class="atleta-body">
+        <div class="atleta-nombre">Rosario Alvayay</div>
+        <div class="atleta-disciplina">Deportista Kinevic · Escalada Deportiva</div>
+        <h3 class="atleta-titulo">Preparación física para el desarrollo deportivo</h3>
+        <p class="atleta-texto">Rosario trabaja junto a Kinevic para desarrollar capacidades físicas relevantes para su disciplina, optimizar su rendimiento y reducir el riesgo de lesiones.</p>
+        <p class="atleta-texto">Nuestro enfoque busca acompañar el crecimiento deportivo a largo plazo mediante entrenamiento individualizado y basado en evidencia.</p>
+        <div class="atleta-check">Desarrollo físico orientado al rendimiento</div>
+        <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20entrenamiento%20y%20rendimiento%20en%20Kinevic" target="_blank" class="atleta-cta">Conocer más →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="deportistas-nota reveal">Cada deportista tiene objetivos distintos. Nuestro trabajo es acompañar el proceso con una planificación individualizada y basada en evidencia.</p>
+</section>
+
+
 <!-- CONTACTO -->
 <section id="contacto">
   <p class="section-tag reveal">Encuéntranos</p>
@@ -2229,7 +2352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Dirección</div><div class="contact-value">Calle 1 Norte 1209, Brisas Del Centro Boulevard, Talca, Maule</div></div></div>
       <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-label">Teléfono / WhatsApp</div><div class="contact-value"><a href="https://wa.me/56966631822">+56 9 6663 1822</a></div></div></div>
-      <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-label">Horario</div><div class="contact-value">Lunes a viernes · 10:00 – 20:00<br>Sábado según disponibilidad</div></div></div>
+      <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-label">Horario</div><div class="contact-value">Lunes a viernes · 10:00 – 20:00<br>Sábado · 10:00 – 13:00</div></div></div>
       <div class="contact-item"><div class="contact-icon">📸</div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://instagram.com/kinevic.cl" target="_blank">@kinevic.cl</a></div></div></div>
       <div class="contact-btns">
         <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-primary">Agendar hora online →</a>
@@ -2261,7 +2384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-col">
       <p class="footer-col-title">Horario</p>
       <span class="footer-link footer-link--static">🕐 Lunes a viernes · 10:00 – 20:00</span>
-      <span class="footer-link footer-link--static">📅 Sábado según disponibilidad</span>
+      <span class="footer-link footer-link--static">📅 Sábado · 10:00 – 13:00</span>
       <a href="https://g.page/r/kinevic" target="_blank" class="footer-link">⭐ 5.0 · 74 opiniones en Google</a>
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="footer-cta">Agendar evaluación →</a>
     </div>
