@@ -1586,6 +1586,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .ba-item img { height: 180px; }
       .ba-item figcaption { font-size: 0.66rem; }
     }
+
+    /* ============================================================
+       PLANES CRO — ayuda decisión, valor/sesión, notas, Core hero
+    ============================================================ */
+
+    /* Texto de ayuda para decisión */
+    .planes-help {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0.25rem 0 2.25rem;
+      font-weight: 300;
+    }
+
+    /* Valor por sesión — info secundaria */
+    .plan-persesion {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 400;
+      margin-top: -0.9rem;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* Nota de frecuencia (recomendado / progresión / seguimiento) */
+    .plan-freqnote {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--teal);
+      background: rgba(91,184,196,0.1);
+      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* Nota "plan más elegido" en Core */
+    .plan-recommend-note {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0.2rem 0 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* === CORE PROTAGONISTA === */
+    .plan-card--recommended {
+      transform: scale(1.04) translateY(-4px);
+      border-color: var(--teal) !important;
+      border-width: 1.5px !important;
+      background: rgba(91,184,196,0.1) !important;
+      box-shadow: 0 0 0 1.5px var(--teal),
+                  0 0 32px rgba(91,184,196,0.28),
+                  0 28px 64px rgba(0,0,0,0.4) !important;
+      z-index: 3;
+      position: relative;
+    }
+    .plan-card--recommended:hover {
+      transform: scale(1.05) translateY(-8px) !important;
+      box-shadow: 0 0 0 1.5px var(--teal),
+                  0 0 44px rgba(91,184,196,0.4),
+                  0 36px 76px rgba(0,0,0,0.45) !important;
+    }
+    /* Badge MÁS POPULAR más visible */
+    .plan-recommended-badge {
+      font-size: 0.68rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.14em !important;
+      color: #fff !important;
+      background: var(--teal) !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(91,184,196,0.5);
+      padding: 0.35rem 1rem !important;
+    }
+
+    /* Mobile: Core no se sale, escalado contenido */
+    @media(max-width: 900px) {
+      .plan-card--recommended { transform: none; }
+      .plan-card--recommended:hover { transform: translateY(-5px) !important; }
+      .planes-help { font-size: 0.95rem; }
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -1978,12 +2063,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="planes-sub-label reveal">Entrenamiento</p>
   <h3 class="planes-sub-title reveal">Planes Kinevic · Entrenamiento</h3>
   <p class="planes-category-desc reveal">Para salud física, prevención de lesiones y mejora del rendimiento.</p>
+  <p class="planes-help reveal">Todos los planes incluyen evaluación profesional, seguimiento y atención personalizada. La diferencia está en la frecuencia de acompañamiento y progresión.</p>
   <div class="planes-grid reveal">
     <div class="plan-card">
       <div class="plan-name">KINEVIC MOVE</div>
-      <div class="plan-sessions">1 sesión por semana</div>
+      <div class="plan-sessions">1 sesión semanal</div>
       <div class="plan-price">$49.000<span>/mes</span></div>
       <div class="plan-period">mensual</div>
+      <div class="plan-persesion">≈ $12.250 por sesión</div>
       <ul class="plan-features">
         <li>Evaluación inicial</li>
         <li>Sesiones personalizadas de 40 min</li>
@@ -1991,15 +2078,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Movilidad y prevención</li>
         <li>Seguimiento clínico</li>
       </ul>
-      <p class="plan-ideal">Ideal para mantenimiento, dolor persistente y continuidad post-rehabilitación.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Consultar →</a>
+      <p class="plan-ideal">Ideal para quienes desean mantenerse activos, controlar molestias recurrentes y prevenir recaídas.</p>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Solicitar información →</a>
     </div>
     <div class="plan-card featured plan-card--recommended">
       <div class="plan-recommended-badge">★ Más popular</div>
       <div class="plan-name">KINEVIC CORE</div>
-      <div class="plan-sessions">2 sesiones por semana</div>
+      <div class="plan-sessions">2 sesiones semanales</div>
       <div class="plan-price">$85.000<span>/mes</span></div>
       <div class="plan-period">mensual · 8 sesiones</div>
+      <div class="plan-persesion">≈ $10.625 por sesión</div>
+      <div class="plan-recommend-note">✓ Plan más elegido por nuestros pacientes</div>
+      <div class="plan-freqnote">Recomendado para la mayoría de los procesos</div>
       <ul class="plan-features">
         <li>Evaluación inicial completa</li>
         <li>8 sesiones mensuales</li>
@@ -2008,14 +2098,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Prevención de recaídas</li>
         <li>Seguimiento profesional continuo</li>
       </ul>
-      <p class="plan-ideal">Ideal para pacientes activos y continuidad de rehabilitación.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Agendar evaluación →</a>
+      <p class="plan-ideal">La mejor opción para recuperar movilidad, fuerza y volver a tus actividades con mayor seguridad.</p>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Quiero este plan →</a>
     </div>
     <div class="plan-card">
       <div class="plan-name">KINEVIC PERFORMANCE</div>
-      <div class="plan-sessions">3 sesiones por semana</div>
+      <div class="plan-sessions">3 sesiones semanales</div>
       <div class="plan-price">$129.000<span>/mes</span></div>
       <div class="plan-period">mensual</div>
+      <div class="plan-persesion">≈ $10.750 por sesión</div>
+      <div class="plan-freqnote">Mayor velocidad de progresión</div>
       <ul class="plan-features">
         <li>Evaluación funcional avanzada</li>
         <li>Trabajo de fuerza y rendimiento</li>
@@ -2023,14 +2115,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Seguimiento semanal</li>
         <li>Prioridad en agenda</li>
       </ul>
-      <p class="plan-ideal">Ideal para quienes buscan mejorar su rendimiento físico, prevenir lesiones y entrenar de forma más eficiente.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Performance" target="_blank" class="btn-plan">Consultar →</a>
+      <p class="plan-ideal">Ideal para personas activas que buscan entrenar mejor, prevenir lesiones y alcanzar sus objetivos físicos.</p>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Performance" target="_blank" class="btn-plan">Consultar disponibilidad →</a>
     </div>
     <div class="plan-card">
       <div class="plan-name">KINEVIC ELITE</div>
-      <div class="plan-sessions">4 sesiones por semana</div>
+      <div class="plan-sessions">4 sesiones semanales</div>
       <div class="plan-price">$169.000<span>/mes</span></div>
       <div class="plan-period">mensual</div>
+      <div class="plan-persesion">≈ $10.560 por sesión</div>
+      <div class="plan-freqnote">Máximo nivel de seguimiento</div>
       <ul class="plan-features">
         <li>Seguimiento intensivo</li>
         <li>Planificación personalizada</li>
@@ -2039,8 +2133,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Soporte continuo</li>
         <li>Prioridad máxima en agenda</li>
       </ul>
-      <p class="plan-ideal">Ideal para procesos deportivos avanzados y alto rendimiento.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Elite" target="_blank" class="btn-plan">Consultar →</a>
+      <p class="plan-ideal">Para quienes buscan acompañamiento profesional intensivo, seguimiento continuo y resultados al máximo nivel.</p>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20hablar%20con%20un%20especialista%20Kinevic" target="_blank" class="btn-plan">Hablar con un especialista →</a>
     </div>
 
   </div>
