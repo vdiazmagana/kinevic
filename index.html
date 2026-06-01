@@ -1895,6 +1895,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .atleta-texto, .service-desc, .plan-features li, .contact-value, .footer-link, .step-desc { font-size: 1.02rem !important; }
       .hero-sub, .section-sub, .deportistas-sub { font-size: 1.08rem !important; }
     }
+
+    /* ============================================================
+       CRO/UX FINAL — trust cards, casos badge, centro hover, SEO, móvil
+    ============================================================ */
+
+    /* ESPECIALISTAS / EQUIPO — trust cards altura uniforme */
+    .equipo-trust { align-items: stretch; }
+    .trust-item { min-height: 76px; align-items: center; }
+
+    /* CASOS — badge de resultado */
+    .caso-resultado {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.82rem; font-weight: 700; color: var(--teal);
+      background: rgba(91,184,196,0.14); border: 1px solid rgba(91,184,196,0.3);
+      border-radius: 100px; padding: 0.35rem 0.9rem; margin-bottom: 1rem;
+    }
+
+    /* CENTRO — hover refinado */
+    .gallery-item img { transition: transform 0.65s cubic-bezier(.22,.61,.36,1), filter 0.65s cubic-bezier(.22,.61,.36,1) !important; }
+
+    /* SEO footer */
+    .footer-seo {
+      font-size: 0.86rem; line-height: 1.7; color: rgba(255,255,255,0.4);
+      max-width: 100%; margin: 0.5rem 0 1.5rem; font-weight: 300;
+      border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem;
+    }
+
+    /* ============================================================
+       MÓVIL 320–768px — sin cortes, padding y botones táctiles
+    ============================================================ */
+    @media(max-width: 768px) {
+      section { padding: 4rem 6vw !important; }
+      h1 { font-size: clamp(2.2rem, 9vw, 3.2rem) !important; }
+      h2.section-title { font-size: clamp(1.7rem, 7vw, 2.4rem) !important; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns a { width: 100%; text-align: center; justify-content: center; }
+      .btn-plan, .atleta-cta, .btn-primary, .btn-fonasa-cta { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+      .plan-fonasa-banner { grid-template-columns: 1fr !important; text-align: left; }
+      .deportistas-grid { grid-template-columns: 1fr !important; }
+      .casos-layout { grid-template-columns: 1fr !important; }
+      .caso-ba { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .footer-cols { grid-template-columns: 1fr !important; gap: 2rem; }
+      .footer-seo { font-size: 0.84rem; }
+    }
+    @media(max-width: 420px) {
+      section { padding: 3.5rem 5vw !important; }
+      .planes-grid { grid-template-columns: 1fr !important; }
+      .hero-cards { grid-template-columns: 1fr 1fr !important; gap: 0.7rem; }
+      .caso-ba { grid-template-columns: 1fr; }
+      .ba-item img { height: 200px !important; }
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -2060,62 +2112,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="service-item">
       <span class="service-icon">🦴</span>
       <div class="service-name">Dolor de columna</div>
-      <p class="service-desc">Tratamiento kinesiológico del dolor cervical, dorsal y lumbar agudo y crónico. Identificamos la causa real, no solo el síntoma.</p>
+      <p class="service-desc">Alivia el dolor cervical, dorsal y lumbar tratando la causa real, no solo el síntoma.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🏃</span>
       <div class="service-name">Kinesiología deportiva</div>
-      <p class="service-desc">Rehabilitación para corredores, ciclistas de MTB, escaladores y deportistas de todos los niveles en Talca y el Maule.</p>
+      <p class="service-desc">Vuelve a tu deporte con rehabilitación para corredores, ciclistas y deportistas de todo nivel.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🔧</span>
       <div class="service-name">Rehabilitación post-quirúrgica</div>
-      <p class="service-desc">Recuperación tras cirugías de rodilla, hombro, cadera y columna. LCA, manguito rotador, prótesis articulares y más.</p>
+      <p class="service-desc">Recuperación guiada tras cirugías de rodilla, hombro, cadera y columna.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">💪</span>
       <div class="service-name">Rehabilitación de hombro</div>
-      <p class="service-desc">Tendinitis, manguito rotador, inestabilidad y síndrome subacromial. Evaluación biomecánica completa.</p>
+      <p class="service-desc">Tratamiento de tendinitis, manguito rotador e inestabilidad con evaluación biomecánica.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🦵</span>
       <div class="service-name">Rehabilitación de rodilla</div>
-      <p class="service-desc">Menisco, ligamentos, condromalacia rotuliana y síndrome de la banda iliotibial. Vuelta al movimiento seguro.</p>
+      <p class="service-desc">Menisco, ligamentos y dolor rotuliano: recupera tu movimiento con seguridad.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🏋️</span>
       <div class="service-name">Ejercicio terapéutico</div>
-      <p class="service-desc">Entrenamiento guiado por kinesiólogo para rehabilitación, prevención de lesiones y rendimiento físico.</p>
+      <p class="service-desc">Entrenamiento guiado por kinesiólogo para prevenir lesiones y mejorar tu rendimiento.</p>
     </div>
     <div class="service-item">
             <span class="service-icon"><img loading="lazy" decoding="async" src="img/k3.webp" alt="pulmón" style="width:2rem;height:2rem;display:block;object-fit:contain;"></span>
       <div class="service-name">Kinesiología Respiratoria Infantil</div>
-      <p class="service-desc">Tratamiento kinesiológico para niños con patologías respiratorias: bronquitis, asma, bronquiolitis y secreciones bronquiales.</p>
+      <p class="service-desc">Tratamiento respiratorio para niños: bronquitis, asma y bronquiolitis.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🌸</span>
       <div class="service-name">Rehabilitación Piso Pélvico</div>
-      <p class="service-desc">Evaluación y tratamiento de disfunciones del suelo pélvico. Prevención, incontinencia y rehabilitación funcional.</p>
+      <p class="service-desc">Tratamiento de incontinencia y disfunciones del suelo pélvico con resultados reales.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🤰</span>
       <div class="service-name">Kinesiología en Embarazo</div>
-      <p class="service-desc">Acompañamiento kinesiológico durante la gestación: alivio del dolor, preparación corporal y movimiento seguro.</p>
+      <p class="service-desc">Acompañamiento durante la gestación: menos dolor y movimiento seguro.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">👶</span>
       <div class="service-name">Rehabilitación Postparto</div>
-      <p class="service-desc">Recuperación funcional tras el parto, incluyendo diástasis, suelo pélvico y reintegración al movimiento.</p>
+      <p class="service-desc">Recupera tu cuerpo tras el parto: diástasis, suelo pélvico y movimiento.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">❤️</span>
       <div class="service-name">Kinesiología Cardíaca</div>
-      <p class="service-desc">Programa de rehabilitación cardiovascular y recuperación funcional para pacientes cardíacos supervisado por especialista.</p>
+      <p class="service-desc">Rehabilitación cardiovascular supervisada para recuperar tu funcionalidad.</p>
     </div>
     <div class="service-item">
       <span class="service-icon">🔥</span>
       <div class="service-name">Kinesiología Metabólica</div>
-      <p class="service-desc">Ejercicio terapéutico para sobrepeso, obesidad y cirugía bariátrica. Protocolo personalizado orientado a resultados.</p>
+      <p class="service-desc">Ejercicio terapéutico para sobrepeso, obesidad y cirugía bariátrica.</p>
     </div>
   </div>
 
@@ -2310,7 +2362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Seguimiento clínico</li>
       </ul>
       <p class="plan-ideal">Ideal para quienes desean mantenerse activos, controlar molestias recurrentes y prevenir recaídas.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Solicitar información →</a>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Comenzar →</a>
     </div>
     <div class="plan-card featured plan-card--recommended">
       <div class="plan-recommended-badge">★ Más popular</div>
@@ -2330,7 +2382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Seguimiento profesional continuo</li>
       </ul>
       <p class="plan-ideal">La mejor opción para recuperar movilidad, fuerza y volver a tus actividades con mayor seguridad.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Quiero este plan →</a>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Reservar evaluación →</a>
     </div>
     <div class="plan-card">
       <div class="plan-name">KINEVIC PERFORMANCE</div>
@@ -2347,7 +2399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Prioridad en agenda</li>
       </ul>
       <p class="plan-ideal">Ideal para personas activas que buscan entrenar mejor, prevenir lesiones y alcanzar sus objetivos físicos.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Performance" target="_blank" class="btn-plan">Consultar disponibilidad →</a>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Performance" target="_blank" class="btn-plan">Solicitar plan →</a>
     </div>
     <div class="plan-card">
       <div class="plan-name">KINEVIC ELITE</div>
@@ -2365,7 +2417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Prioridad máxima en agenda</li>
       </ul>
       <p class="plan-ideal">Para quienes buscan acompañamiento profesional intensivo, seguimiento continuo y resultados al máximo nivel.</p>
-      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20hablar%20con%20un%20especialista%20Kinevic" target="_blank" class="btn-plan">Hablar con un especialista →</a>
+      <a href="https://wa.me/56966631822?text=Hola%2C%20quiero%20hablar%20con%20un%20especialista%20Kinevic" target="_blank" class="btn-plan">Agenda prioritaria →</a>
     </div>
 
   </div>
@@ -2410,6 +2462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="caso-javier-text">
         <div class="caso-javier-tag">🚵 Caso deportivo destacado</div>
         <div class="caso-javier-title">Javier Valenzuela<br>Corredor Elite Downhill - Team Cube</div>
+        <span class="caso-resultado">✓ Retorno a competencia</span>
         <p class="caso-javier-desc">Después de fracturarse ambas muñecas, Javier enfrentó un largo proceso de recuperación. Con una rehabilitación personalizada y objetivos claros, logró recuperar su función, volver a entrenar y regresar a las competencias. Porque una lesión no tiene por qué marcar el final de tu deporte, sino el comienzo de una recuperación bien planificada.</p>
         <a href="https://wa.me/56966631822?text=Hola%2C%20soy%20deportista%20y%20quiero%20info%20sobre%20rehabilitaci%C3%B3n%20en%20Kinevic" target="_blank" class="btn-primary" style="font-size:0.82rem;padding:0.7rem 1.5rem;">Consultar →</a>
       </div>
@@ -2544,6 +2597,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="footer-cta">Agendar evaluación →</a>
     </div>
   </div>
+  <p class="footer-seo">Kinevic es un centro de rehabilitación y ejercicio terapéutico ubicado en Talca, especializado en kinesiología deportiva, traumatológica, respiratoria, metabólica y rehabilitación postquirúrgica. Como kinesiólogo en Talca, ofrecemos rehabilitación deportiva en Talca, ejercicio terapéutico en Talca y atención Fonasa, siendo un centro de rehabilitación en Talca enfocado en resultados reales.</p>
   <div class="footer-bottom">
     <span class="footer-text">© 2025 Kinevic – Centro de Rehabilitación y Ejercicio Físico · Talca, Chile</span>
   </div>
