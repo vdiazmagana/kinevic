@@ -1988,7 +1988,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "10:00",
-      "closes": "20:00"
+      "closes": "19:30"
     },
     {
       "@type": "OpeningHoursSpecification",
@@ -2020,7 +2020,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 </head>
-<body> 
+<body>
+<!-- Íconos vectoriales de marca (reemplazan emojis: render consistente en todo dispositivo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.57l-5.9 3.1 1.13-6.57L2.45 9.44l6.6-.96z"/></symbol>
+  <symbol id="i-med" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></symbol>
+</defs></svg>
+<style>
+  .icx{width:1em;height:1em;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.12em;display:inline-block;flex-shrink:0}
+  .contact-icon .icx{width:20px;height:20px}
+  .footer-link .icx,.footer-badge .icx{margin-right:7px}
+  .icx--fill{fill:var(--teal);stroke:none}
+</style>
+
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXNQV3LF"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -2057,7 +2074,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-cards">
 
     <div class="hero-card">
-      <div class="hero-card-icon">⭐</div>
+      <div class="hero-card-icon"><svg class="icx icx--fill"><use href="#i-star"/></svg></div>
       <div class="hero-card-value">74+</div>
       <div class="hero-card-benefit">Reseñas positivas en Google</div>
     </div>
@@ -2069,13 +2086,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="hero-card hero-card--accent">
-      <div class="hero-card-icon">🏥</div>
+      <div class="hero-card-icon"><svg class="icx"><use href="#i-med"/></svg></div>
       <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Bono Fonasa</div>
       <div class="hero-card-benefit">Disponible en consulta</div>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-icon">📍</div>
+      <div class="hero-card-icon"><svg class="icx"><use href="#i-pin"/></svg></div>
       <div class="hero-card-value" style="font-size:1.15rem;letter-spacing:-0.01em;">Talca Centro</div>
       <div class="hero-card-benefit">Brisas del Centro</div>
     </div>
@@ -2105,7 +2122,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="featured-name">Rehabilitación postquirúrgica</span>
     </a>
     <a href="#planes" class="featured-item featured-item--fonasa">
-      <span class="featured-icon">🏥</span>
+      <span class="featured-icon"><svg class="icx"><use href="#i-med"/></svg></span>
       <span class="featured-name">Atención Fonasa</span>
     </a>
   </div>
@@ -2199,10 +2216,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="equipo-text">
       <p class="equipo-body">En Kinevic trabajamos con un enfoque basado en evidencia para ayudarte a recuperar tu movilidad, disminuir el dolor y volver a tus actividades con confianza. Cada tratamiento es personalizado y adaptado a tus objetivos, con atención directa de kinesiólogos comprometidos con tu recuperación.</p>
       <div class="equipo-trust">
-        <div class="trust-item"><span class="trust-icon">⭐</span><div><strong>74+</strong><span>reseñas positivas</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icx icx--fill"><use href="#i-star"/></svg></span><div><strong>74+</strong><span>reseñas positivas</span></div></div>
         <div class="trust-item"><span class="trust-icon">⏱️</span><div><strong>1 a 1</strong><span>atención personalizada</span></div></div>
-        <div class="trust-item"><span class="trust-icon">🏥</span><div><strong>Fonasa</strong><span>disponible</span></div></div>
-        <div class="trust-item"><span class="trust-icon">📍</span><div><strong>Talca</strong><span>Brisas del Centro</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icx"><use href="#i-med"/></svg></span><div><strong>Fonasa</strong><span>disponible</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icx"><use href="#i-pin"/></svg></span><div><strong>Talca</strong><span>Brisas del Centro</span></div></div>
       </div>
       <div class="equipo-badges">
         <span class="badge">Rehabilitación deportiva</span>
@@ -2293,8 +2310,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="section-sub reveal">Contamos con espacios diseñados para evaluación, rehabilitación y ejercicio terapéutico, permitiendo acompañarte en cada etapa de tu recuperación.</p>
   <div class="centro-benefits reveal">
     <div class="centro-benefit"><span>🏋️</span><span>Área equipada para ejercicio terapéutico</span></div>
-    <div class="centro-benefit"><span>🏥</span><span>Atención personalizada 1 a 1</span></div>
-    <div class="centro-benefit"><span>📍</span><span>Ubicación céntrica en Talca</span></div>
+    <div class="centro-benefit"><span><svg class="icx"><use href="#i-med"/></svg></span><span>Atención personalizada 1 a 1</span></div>
+    <div class="centro-benefit"><span><svg class="icx"><use href="#i-pin"/></svg></span><span>Ubicación céntrica en Talca</span></div>
     <div class="centro-benefit"><span>🅿️</span><span>Acceso y estacionamiento cercano</span></div>
   </div>
   <div class="gallery-grid reveal">
@@ -2318,7 +2335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="section-tag reveal">Programas de movimiento y rendimiento</p>
   <h2 class="section-title reveal">Planes Kinevic</h2>
   <p class="section-sub reveal">Diseñados para rehabilitación, continuidad terapéutica, salud física y rendimiento deportivo.</p>
-  <div class="planes-trust reveal">⭐ Más de 70 reseñas 5 estrellas en Google · Atención Fonasa y particular · Brisas del Centro, Talca</div>
+  <div class="planes-trust reveal"><svg class="icx icx--fill"><use href="#i-star"/></svg> Más de 70 reseñas 5 estrellas en Google · Atención Fonasa y particular · Brisas del Centro, Talca</div>
 
   <!-- BLOQUE REHABILITACIÓN -->
   <p class="planes-sub-label reveal">Rehabilitación</p>
@@ -2489,7 +2506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="agenda-cta-sub">Agenda una evaluación y recibe un plan personalizado según tus objetivos.</p>
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-white">Agendar evaluación →</a>
       <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Kinevic" target="_blank" class="btn-white-outline">Escribir por WhatsApp</a>
-      <p class="agenda-note">📍 Brisas del Centro · Talca · Atención Fonasa y particular</p>
+      <p class="agenda-note"><svg class="icx"><use href="#i-pin"/></svg> Brisas del Centro · Talca · Atención Fonasa y particular</p>
     </div>
   </div>
 </section>
@@ -2561,10 +2578,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="section-sub reveal">Estamos en Brisas del Centro, en el corazón de Talca.</p>
   <div class="contact-grid reveal">
     <div>
-      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Dirección</div><div class="contact-value">Calle 1 Norte 1209, Brisas Del Centro Boulevard, Talca, Maule</div></div></div>
-      <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-label">Teléfono / WhatsApp</div><div class="contact-value"><a href="https://wa.me/56996631822">+56 9 9663 1822</a></div></div></div>
-      <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-label">Horario</div><div class="contact-value">Lunes a viernes · 10:00 – 20:00<br>Sábado · 10:00 – 13:00</div></div></div>
-      <div class="contact-item"><div class="contact-icon">📸</div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://instagram.com/kinevic.cl" target="_blank">@kinevic.cl</a></div></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg class="icx"><use href="#i-pin"/></svg></div><div><div class="contact-label">Dirección</div><div class="contact-value">Calle 1 Norte 1209, Brisas Del Centro Boulevard, Talca, Maule</div></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg class="icx"><use href="#i-phone"/></svg></div><div><div class="contact-label">Teléfono / WhatsApp</div><div class="contact-value"><a href="https://wa.me/56996631822">+56 9 9663 1822</a></div></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg class="icx"><use href="#i-clock"/></svg></div><div><div class="contact-label">Horario</div><div class="contact-value">Lunes a viernes · 10:00 – 19:30<br>Sábado · 10:00 – 13:00</div></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg class="icx"><use href="#i-cam"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://instagram.com/kinevic.cl" target="_blank">@kinevic.cl</a></div></div></div>
       <div class="contact-btns">
         <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="btn-primary">Agendar hora online →</a>
         <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Kinevic" target="_blank" class="btn-white-outline">WhatsApp directo</a>
@@ -2584,19 +2601,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="footer-logo-tagline">Centro de Kinesiología · Talca</span>
       </div>
       <p class="footer-desc">Centro de kinesiología en Talca. Rehabilitación deportiva, post-quirúrgica y ejercicio terapéutico con atención personalizada 1 a 1 y cobertura Fonasa en Brisas del Centro, Talca.</p>
-      <span class="footer-badge">🏥 Atención Fonasa y particular</span>
+      <span class="footer-badge"><svg class="icx"><use href="#i-med"/></svg>Atención Fonasa y particular</span>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Contacto</p>
-      <a href="https://maps.google.com/?q=Calle+1+Norte+1209+Brisas+Del+Centro+Talca" target="_blank" class="footer-link">📍 Calle 1 Norte 1209, Brisas del Centro, Talca</a>
-      <a href="https://wa.me/56996631822" target="_blank" class="footer-link">📞 +56 9 9663 1822</a>
-      <a href="https://instagram.com/kinevic.cl" target="_blank" class="footer-link">📸 @kinevic.cl</a>
+      <a href="https://maps.google.com/?q=Calle+1+Norte+1209+Brisas+Del+Centro+Talca" target="_blank" class="footer-link"><svg class="icx"><use href="#i-pin"/></svg>Calle 1 Norte 1209, Brisas del Centro, Talca</a>
+      <a href="https://wa.me/56996631822" target="_blank" class="footer-link"><svg class="icx"><use href="#i-phone"/></svg>+56 9 9663 1822</a>
+      <a href="https://instagram.com/kinevic.cl" target="_blank" class="footer-link"><svg class="icx"><use href="#i-cam"/></svg>@kinevic.cl</a>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Horario</p>
-      <span class="footer-link footer-link--static">🕐 Lunes a viernes · 10:00 – 20:00</span>
-      <span class="footer-link footer-link--static">📅 Sábado · 10:00 – 13:00</span>
-      <a href="https://g.page/r/kinevic" target="_blank" class="footer-link">⭐ 5.0 · 74 opiniones en Google</a>
+      <span class="footer-link footer-link--static"><svg class="icx"><use href="#i-clock"/></svg>Lunes a viernes · 10:00 – 19:30</span>
+      <span class="footer-link footer-link--static"><svg class="icx"><use href="#i-cal"/></svg>Sábado · 10:00 – 13:00</span>
+      <a href="https://g.page/r/kinevic" target="_blank" class="footer-link"><svg class="icx icx--fill"><use href="#i-star"/></svg>5.0 · 74 opiniones en Google</a>
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" class="footer-cta">Agendar evaluación →</a>
     </div>
   </div>
