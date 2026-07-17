@@ -2586,11 +2586,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } });
   }, {threshold:0.1});
   document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
-  window.addEventListener('scroll',()=>{
-    let cur='';
-    document.querySelectorAll('section[id]').forEach(s=>{ if(window.scrollY>=s.offsetTop-120) cur=s.id; });
-    document.querySelectorAll('.nav-links a').forEach(a=>{ a.style.color=a.getAttribute('href')==='#'+cur?'var(--teal)':''; });
-  });
+  // Resaltado de sección activa sin lecturas de layout en scroll (evita reflow forzado)
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const linkFor = {};
+  navLinks.forEach(a => { linkFor[a.getAttribute('href').slice(1)] = a; });
+  const secObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.style.color = '');
+        const l = linkFor[e.target.id];
+        if (l) l.style.color = 'var(--teal)';
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
 </script>
     <!-- Botón flotante WhatsApp -->
 
