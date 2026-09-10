@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vdiazmagana.github.io/kinevic/sitemap.xml
+Sitemap: https://www.kinevic.cl/sitemap.xml
