@@ -2290,115 +2290,114 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- PLANES -->
+<style>
+  .planes-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; align-items:stretch; }
+  .plan-card--clinico { border:1.5px solid var(--teal) !important; background:rgba(91,184,196,0.09) !important; }
+  .plan-card--clinico:hover { background:rgba(91,184,196,0.13) !important; }
+  .plan-card--clinico .btn-plan { background:var(--teal); color:var(--white); border-color:var(--teal); }
+  .plan-card--clinico .btn-plan:hover { background:var(--teal-deeper); border-color:var(--teal-deeper); }
+  .plan-tag-top { position:absolute; top:0; right:0; background:var(--teal); color:#fff; font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.9rem; border-radius:0 8px 0 6px; }
+  .planes-nota { max-width:780px; margin:1.75rem 0 0; padding:1.15rem 1.35rem; background:rgba(255,255,255,0.04); border-left:3px solid var(--teal); font-size:0.88rem; font-weight:300; line-height:1.8; color:rgba(255,255,255,0.66); }
+  .planes-nota strong { color:rgba(255,255,255,0.92); font-weight:700; }
+  .planes-continuidad { margin-top:4rem; }
+  .planes-continuidad .plan-card { background:rgba(255,255,255,0.025); }
+  .planes-continuidad .plan-price { font-size:1.9rem; }
+  .planes-extra { margin-top:1.5rem; font-size:0.85rem; font-weight:300; color:rgba(255,255,255,0.45); }
+  .planes-extra a { color:var(--teal); font-weight:700; text-decoration:none; }
+  .planes-extra a:hover { text-decoration:underline; }
+  @media (max-width:860px) { .planes-grid-2 { grid-template-columns:1fr; } }
+</style>
 <section id="planes">
-  <p class="section-tag reveal">Programas de movimiento y rendimiento</p>
+  <p class="section-tag reveal">Programas de rehabilitación y continuidad</p>
   <h2 class="section-title reveal">Planes Kinevic</h2>
-  <p class="section-sub reveal">Diseñados para rehabilitación, continuidad terapéutica, salud física y rendimiento deportivo.</p>
-  <div class="planes-trust reveal"><svg class="icx icx--fill"><use href="#i-star"/></svg> Más de 80 reseñas 5 estrellas en Google · Atención Fonasa y particular · Brisas del Centro, Talca</div>
+  <p class="section-sub reveal">Primero el proceso clínico para recuperarte. Después, si quieres, el acompañamiento para sostener lo que ganaste.</p>
+  <div class="planes-trust reveal"><svg class="icx icx--fill"><use href="#i-star"/></svg> 94 reseñas 5 estrellas en Google · Atención Fonasa y particular · Brisas del Centro, Talca</div>
 
   <!-- BLOQUE REHABILITACIÓN -->
   <p class="planes-sub-label reveal">Rehabilitación</p>
   <h3 class="planes-sub-title reveal">Planes Kinevic · Rehabilitación</h3>
-  <p class="planes-category-desc reveal">Para personas con dolor, lesiones, cirugía o necesidad de recuperación funcional.</p>
-  <div class="planes-grid-single reveal">
+  <p class="planes-category-desc reveal">Para personas con dolor, lesiones o cirugía reciente. Es un proceso clínico: evaluación kinésica, diagnóstico, plan de cargas progresivo y criterios de alta.</p>
 
-    <!-- FONASA BANNER -->
-    <div class="plan-fonasa-banner">
-      <div style="position:absolute;top:0;right:0;background:var(--teal);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.9rem;border-radius:0 10px 0 6px;">FONASA</div>
-      <div class="plan-fonasa-price-block">
-        <div class="plan-name">COBERTURA FONASA</div>
-        <div class="plan-sessions">10 sesiones de kinesiología</div>
-        <div class="plan-price" style="font-size:2.6rem;">$83.360<span style="font-size:0.9rem;font-weight:400;"> copago</span></div>
-        <div class="plan-period">Valor referencial · sujeto a bono vigente</div>
-      </div>
-      <ul class="plan-features plan-fonasa-features">
+  <div class="planes-grid-2 reveal">
+
+    <div class="plan-card plan-card--clinico">
+      <div class="plan-tag-top">Fonasa</div>
+      <div class="plan-name">REHABILITACIÓN FONASA</div>
+      <div class="plan-sessions">10 sesiones de kinesiología · 40 min</div>
+      <div class="plan-price">$83.360<span> copago</span></div>
+      <div class="plan-period">Valor referencial · sujeto a bono vigente</div>
+      <div class="plan-persesion">≈ $8.336 por sesión</div>
+      <ul class="plan-features">
+        <li>Evaluación kinésica inicial incluida</li>
+        <li>Atención 1 a 1 durante toda la sesión</li>
+        <li>Plan de cargas con objetivos medibles</li>
+        <li>Control de progresión y criterios de alta</li>
         <li>Bono disponible en consulta</li>
-        <li>Atención personalizada 1 a 1</li>
-        <li>Evaluación inicial incluida</li>
-        <li>Seguimiento profesional</li>
       </ul>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20atenci%C3%B3n%20Fonasa%20en%20Kinevic" target="_blank" class="btn-plan btn-fonasa-cta" style="white-space:nowrap;">Agendar evaluación →</a>
+      <p class="plan-ideal">La vía de la mayoría de nuestros pacientes. Compras el bono de kinesiología en Fonasa y lo presentas en la sesión.</p>
+      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20rehabilitaci%C3%B3n%20con%20bono%20Fonasa%20en%20Kinevic" target="_blank" class="btn-plan">Agendar evaluación →</a>
     </div>
+
+    <div class="plan-card plan-card--clinico">
+      <div class="plan-tag-top">Particular</div>
+      <div class="plan-name">REHABILITACIÓN PARTICULAR</div>
+      <div class="plan-sessions">10 sesiones de kinesiología · 40 min</div>
+      <div class="plan-price">$160.000<span> pack</span></div>
+      <div class="plan-period">pack completo de 10 sesiones</div>
+      <div class="plan-persesion">≈ $16.000 por sesión</div>
+      <ul class="plan-features">
+        <li>Evaluación kinésica inicial incluida</li>
+        <li>Atención 1 a 1 durante toda la sesión</li>
+        <li>Plan de cargas con objetivos medibles</li>
+        <li>Control de progresión y criterios de alta</li>
+        <li>Boleta para reembolso de isapre o seguro complementario</li>
+      </ul>
+      <p class="plan-ideal">Sin trámite de bono y con mayor flexibilidad de agenda. Incluye piso pélvico en formato de 1 hora por $200.000.</p>
+      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20el%20pack%20particular%20de%20rehabilitaci%C3%B3n%20en%20Kinevic" target="_blank" class="btn-plan">Reservar evaluación →</a>
+    </div>
+
   </div>
 
-  <!-- BLOQUE ENTRENAMIENTO -->
-  <p class="planes-sub-label reveal">Entrenamiento</p>
-  <h3 class="planes-sub-title reveal">Planes Kinevic · Entrenamiento</h3>
-  <p class="planes-category-desc reveal">Para salud física, prevención de lesiones y mejora del rendimiento.</p>
-  <p class="planes-help reveal">Todos los planes incluyen evaluación profesional, seguimiento y atención personalizada. La diferencia está en la frecuencia de acompañamiento y progresión.</p>
-  <div class="planes-grid reveal">
-    <div class="plan-card">
-      <div class="plan-name">KINEVIC MOVE</div>
-      <div class="plan-sessions">1 sesión semanal</div>
-      <div class="plan-price">$49.000<span>/mes</span></div>
-      <div class="plan-period">mensual</div>
-      <div class="plan-persesion">≈ $12.250 por sesión</div>
-      <ul class="plan-features">
-        <li>Evaluación inicial</li>
-        <li>Sesiones personalizadas de 40 min</li>
-        <li>Ejercicio terapéutico guiado</li>
-        <li>Movilidad y prevención</li>
-        <li>Seguimiento clínico</li>
-      </ul>
-      <p class="plan-ideal">Ideal para quienes desean mantenerse activos, controlar molestias recurrentes y prevenir recaídas.</p>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Comenzar →</a>
-    </div>
-    <div class="plan-card featured plan-card--recommended">
-      <div class="plan-recommended-badge">★ Más popular</div>
-      <div class="plan-name">KINEVIC CORE</div>
-      <div class="plan-sessions">2 sesiones semanales</div>
-      <div class="plan-price">$85.000<span>/mes</span></div>
-      <div class="plan-period">mensual · 8 sesiones</div>
-      <div class="plan-persesion">≈ $10.625 por sesión</div>
-      <div class="plan-recommend-note">✓ Plan más elegido por nuestros pacientes</div>
-      <div class="plan-freqnote">Recomendado para la mayoría de los procesos</div>
-      <ul class="plan-features">
-        <li>Evaluación inicial completa</li>
-        <li>8 sesiones mensuales</li>
-        <li>Entrenamiento terapéutico personalizado</li>
-        <li>Fortalecimiento y control corporal</li>
-        <li>Prevención de recaídas</li>
-        <li>Seguimiento profesional continuo</li>
-      </ul>
-      <p class="plan-ideal">La mejor opción para recuperar movilidad, fuerza y volver a tus actividades con mayor seguridad.</p>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Reservar evaluación →</a>
-    </div>
-    <div class="plan-card">
-      <div class="plan-name">KINEVIC PERFORMANCE</div>
-      <div class="plan-sessions">3 sesiones semanales</div>
-      <div class="plan-price">$129.000<span>/mes</span></div>
-      <div class="plan-period">mensual</div>
-      <div class="plan-persesion">≈ $10.750 por sesión</div>
-      <div class="plan-freqnote">Mayor velocidad de progresión</div>
-      <ul class="plan-features">
-        <li>Evaluación funcional avanzada</li>
-        <li>Trabajo de fuerza y rendimiento</li>
-        <li>Retorno deportivo progresivo</li>
-        <li>Seguimiento semanal</li>
-        <li>Prioridad en agenda</li>
-      </ul>
-      <p class="plan-ideal">Ideal para personas activas que buscan entrenar mejor, prevenir lesiones y alcanzar sus objetivos físicos.</p>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Performance" target="_blank" class="btn-plan">Solicitar plan →</a>
-    </div>
-    <div class="plan-card">
-      <div class="plan-name">KINEVIC ELITE</div>
-      <div class="plan-sessions">4 sesiones semanales</div>
-      <div class="plan-price">$169.000<span>/mes</span></div>
-      <div class="plan-period">mensual</div>
-      <div class="plan-persesion">≈ $10.560 por sesión</div>
-      <div class="plan-freqnote">Máximo nivel de seguimiento</div>
-      <ul class="plan-features">
-        <li>Seguimiento intensivo</li>
-        <li>Planificación personalizada</li>
-        <li>Control de progresión física</li>
-        <li>Recuperación y prevención</li>
-        <li>Soporte continuo</li>
-        <li>Prioridad máxima en agenda</li>
-      </ul>
-      <p class="plan-ideal">Para quienes buscan acompañamiento profesional intensivo, seguimiento continuo y resultados al máximo nivel.</p>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20hablar%20con%20un%20especialista%20Kinevic" target="_blank" class="btn-plan">Agenda prioritaria →</a>
+  <p class="planes-nota reveal"><strong>Por qué 40 minutos.</strong> Son 40 minutos de trabajo efectivo uno a uno, sin salas compartidas ni esperas entre ejercicios. Lo que determina tu resultado no es cuánto dura la sesión, sino la calidad de la evaluación, la progresión de cargas y que sostengas la frecuencia. Preferimos 40 minutos reales dentro de un proceso bien planificado antes que una hora diluida.</p>
+
+  <!-- BLOQUE CONTINUIDAD -->
+  <div class="planes-continuidad">
+    <p class="planes-sub-label reveal">Continuidad</p>
+    <h3 class="planes-sub-title reveal">Después del alta</h3>
+    <p class="planes-category-desc reveal">Para cuando ya terminaste tu rehabilitación y quieres sostener lo que ganaste.</p>
+    <p class="planes-help reveal">No reemplazan un proceso de rehabilitación: son para quien ya fue dado de alta y quiere mantener fuerza, movilidad y prevención con acompañamiento profesional.</p>
+
+    <div class="planes-grid-2 reveal">
+      <div class="plan-card">
+        <div class="plan-name">KINEVIC MOVE</div>
+        <div class="plan-sessions">1 sesión semanal · 40 min</div>
+        <div class="plan-price">$49.000<span>/mes</span></div>
+        <div class="plan-period">mensual · 4 sesiones</div>
+        <ul class="plan-features">
+          <li>Ejercicio terapéutico guiado</li>
+          <li>Movilidad y prevención de recaídas</li>
+          <li>Seguimiento profesional</li>
+        </ul>
+        <p class="plan-ideal">Para mantenerte activo y controlar molestias recurrentes después del alta.</p>
+        <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20el%20plan%20Kinevic%20Move" target="_blank" class="btn-plan">Comenzar →</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">KINEVIC CORE</div>
+        <div class="plan-sessions">2 sesiones semanales · 40 min</div>
+        <div class="plan-price">$85.000<span>/mes</span></div>
+        <div class="plan-period">mensual · 8 sesiones</div>
+        <ul class="plan-features">
+          <li>Entrenamiento terapéutico personalizado</li>
+          <li>Fortalecimiento y control corporal</li>
+          <li>Prevención de recaídas</li>
+          <li>Seguimiento profesional continuo</li>
+        </ul>
+        <p class="plan-ideal">Para consolidar fuerza y control corporal cuando quieres avanzar más rápido tras el alta.</p>
+        <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20el%20plan%20Kinevic%20Core" target="_blank" class="btn-plan">Reservar evaluación →</a>
+      </div>
     </div>
 
+    <p class="planes-extra reveal">¿Buscas mayor frecuencia o preparación deportiva? Trabajamos planes de 3 y 4 sesiones semanales y programas de rendimiento — mira <a href="#deportistas">Deportistas Kinevic</a> o <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20entrenamiento%20y%20rendimiento%20en%20Kinevic" target="_blank">escríbenos</a>.</p>
   </div>
 </section>
 
