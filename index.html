@@ -2292,19 +2292,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- PLANES -->
 <style>
   .planes-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; align-items:stretch; }
+  .planes-grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1.5rem; align-items:stretch; }
+  /* Tipografía uniforme en todas las tarjetas de plan */
+  #planes .plan-price { font-size:2.4rem !important; }
+  #planes .plan-price span { font-size:1rem !important; font-weight:400 !important; }
+  #planes .plan-features li { font-size:1rem !important; line-height:1.55; }
+  #planes .plan-ideal { font-size:1rem !important; line-height:1.6; }
+  #planes .plan-period, #planes .plan-persesion { font-size:0.88rem !important; }
+  /* CTA alineados al pie en toda la grilla */
+  #planes .plan-card { display:flex; flex-direction:column; }
+  #planes .plan-card .btn-plan { margin-top:auto; }
+  #planes .plan-card .plan-ideal { margin-bottom:1.5rem; }
+  .faq-answer { font-size:1rem !important; }
   .plan-card--clinico { border:1.5px solid var(--teal) !important; background:rgba(91,184,196,0.09) !important; }
   .plan-card--clinico:hover { background:rgba(91,184,196,0.13) !important; }
   .plan-card--clinico .btn-plan { background:var(--teal); color:var(--white); border-color:var(--teal); }
   .plan-card--clinico .btn-plan:hover { background:var(--teal-deeper); border-color:var(--teal-deeper); }
   .plan-tag-top { position:absolute; top:0; right:0; background:var(--teal); color:#fff; font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.9rem; border-radius:0 8px 0 6px; }
-  .planes-nota { max-width:780px; margin:1.75rem 0 0; padding:1.15rem 1.35rem; background:rgba(255,255,255,0.04); border-left:3px solid var(--teal); font-size:0.88rem; font-weight:300; line-height:1.8; color:rgba(255,255,255,0.66); }
-  .planes-nota strong { color:rgba(255,255,255,0.92); font-weight:700; }
   .planes-continuidad { margin-top:4rem; }
   .planes-continuidad .plan-card { background:rgba(255,255,255,0.025); }
-  .planes-continuidad .plan-price { font-size:1.9rem; }
-  .planes-extra { margin-top:1.5rem; font-size:0.85rem; font-weight:300; color:rgba(255,255,255,0.45); }
-  .planes-extra a { color:var(--teal); font-weight:700; text-decoration:none; }
-  .planes-extra a:hover { text-decoration:underline; }
   @media (max-width:860px) { .planes-grid-2 { grid-template-columns:1fr; } }
 </style>
 <section id="planes">
@@ -2318,7 +2324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3 class="planes-sub-title reveal">Planes Kinevic · Rehabilitación</h3>
   <p class="planes-category-desc reveal">Para personas con dolor, lesiones o cirugía reciente. Es un proceso clínico: evaluación kinésica, diagnóstico, plan de cargas progresivo y criterios de alta.</p>
 
-  <div class="planes-grid-2 reveal">
+  <div class="planes-grid-3 reveal">
 
     <div class="plan-card plan-card--clinico">
       <div class="plan-tag-top">Fonasa</div>
@@ -2352,13 +2358,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Control de progresión y criterios de alta</li>
         <li>Boleta para reembolso de isapre o seguro complementario</li>
       </ul>
-      <p class="plan-ideal">Sin trámite de bono y con mayor flexibilidad de agenda. Incluye piso pélvico en formato de 1 hora por $200.000.</p>
+      <p class="plan-ideal">Sin trámite de bono y con mayor flexibilidad de agenda.</p>
       <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20el%20pack%20particular%20de%20rehabilitaci%C3%B3n%20en%20Kinevic" target="_blank" class="btn-plan">Reservar evaluación →</a>
+    </div>
+    <div class="plan-card plan-card--clinico">
+      <div class="plan-tag-top">Piso pélvico</div>
+      <div class="plan-name">REHABILITACIÓN PISO PÉLVICO</div>
+      <div class="plan-sessions">10 sesiones de piso pélvico · 1 hora</div>
+      <div class="plan-price">$83.360<span> copago Fonasa</span></div>
+      <div class="plan-period">$200.000 particular · reembolso de isapre con boleta</div>
+      <div class="plan-persesion">≈ $8.336 por sesión con Fonasa</div>
+      <ul class="plan-features">
+        <li>Evaluación de piso pélvico $16.000, Fonasa y particular</li>
+        <li>Incontinencia, dolor pélvico y disfunciones del suelo pélvico</li>
+        <li>Embarazo y recuperación postparto</li>
+        <li>Sesiones de 1 hora, atención 1 a 1</li>
+        <li>Kinesióloga especialista, en box privado</li>
+      </ul>
+      <p class="plan-ideal">Un espacio reservado y sin apuro para un motivo de consulta que muchas mujeres postergan.</p>
+      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20info%20sobre%20rehabilitaci%C3%B3n%20de%20piso%20p%C3%A9lvico%20en%20Kinevic" target="_blank" class="btn-plan">Agendar evaluación →</a>
     </div>
 
   </div>
 
-  <p class="planes-nota reveal"><strong>Por qué 40 minutos.</strong> Son 40 minutos de trabajo efectivo uno a uno, sin salas compartidas ni esperas entre ejercicios. Lo que determina tu resultado no es cuánto dura la sesión, sino la calidad de la evaluación, la progresión de cargas y que sostengas la frecuencia. Preferimos 40 minutos reales dentro de un proceso bien planificado antes que una hora diluida.</p>
 
   <!-- BLOQUE CONTINUIDAD -->
   <div class="planes-continuidad">
@@ -2397,7 +2419,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <p class="planes-extra reveal">¿Buscas mayor frecuencia o preparación deportiva? Trabajamos planes de 3 y 4 sesiones semanales y programas de rendimiento — mira <a href="#deportistas">Deportistas Kinevic</a> o <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20entrenamiento%20y%20rendimiento%20en%20Kinevic" target="_blank">escríbenos</a>.</p>
   </div>
 </section>
 
