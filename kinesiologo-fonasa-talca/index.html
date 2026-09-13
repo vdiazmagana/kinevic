@@ -120,7 +120,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   footer a { color:var(--teal); text-decoration:none; }
   .footer-desc { font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.3); }
 
+  .trustbar { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0; margin-top:2rem; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  .trustbar div { padding:0.85rem 1rem; border-right:1px solid var(--border); }
+  .trustbar div:last-child { border-right:0; }
+  .trustbar b { display:block; font-family:'Montserrat',sans-serif; font-size:0.95rem; font-weight:800; color:var(--charcoal); line-height:1.25; }
+  .trustbar span { display:block; font-size:0.78rem; color:var(--gray); margin-top:0.1rem; line-height:1.4; }
+  .destacado { background:var(--gray-light); border-left:4px solid var(--teal); padding:1.6rem 1.9rem; margin-top:1.5rem; border-radius:0 8px 8px 0; }
+  .destacado h3 { margin-bottom:0.6rem; }
+  .destacado p { margin-bottom:0; font-size:0.97rem; }
+  .grupos { display:flex; flex-direction:column; gap:1.1rem; margin-top:1.5rem; }
+  .grupo { border:1px solid var(--border); border-radius:8px; padding:1.25rem 1.5rem; }
+  .grupo-k { font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal-deeper); margin-bottom:0.7rem; }
+  .grupo p { margin-bottom:0; font-size:0.95rem; }
+  .cta-inline { margin-top:1.75rem; }
+  .paso-k { font-size:0.64rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--teal-deeper); margin-bottom:0.2rem; }
   @media (max-width:600px) {
+    .trustbar div { border-right:0; border-bottom:1px solid var(--border); }
+    .trustbar div:last-child { border-bottom:0; }
     .nav-back { display:none; }
     .paso { grid-template-columns:36px 1fr; gap:0.85rem; }
     .paso::before { width:36px; height:36px; font-size:0.82rem; }
@@ -134,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <nav>
   <a href="/" class="nav-logo"><img src="../img/logo-kinevic-centro-kinesiologia-talca.webp" alt="KINEVIC – Centro de Kinesiología en Talca" width="149" height="38" /></a>
   <a href="/" class="nav-back">← Volver al inicio</a>
-  <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20kinesiolog%C3%ADa%20con%20bono%20Fonasa%20en%20Kinevic" target="_blank" rel="noopener" class="nav-cta">Agendar por WhatsApp</a>
+  <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener" class="nav-cta">Agendar evaluación</a>
 </nav>
 
 <div class="wrap">
@@ -143,32 +159,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <header class="hero">
     <span class="eyebrow">Atención Fonasa · Brisas del Centro, Talca</span>
     <h1>Kinesiólogo con bono <em>Fonasa</em> en Talca</h1>
-    <p class="lede">En Kinevic atendemos con <strong>bono Fonasa</strong> y <strong>el bono se compra acá mismo</strong>: no tienes que ir a una sucursal. El pack de <strong>10 sesiones de 40 minutos</strong>, con un kinesiólogo dedicado a ti durante todo el bloque, queda en <strong>$83.360 de copago</strong>.</p>
+    <p class="lede"><strong>Tu bono lo compras acá mismo</strong>, el día de tu sesión: no tienes que ir a una sucursal de Fonasa, solo traer tu orden médica. El pack de <strong>10 sesiones de 40 minutos</strong>, con un kinesiólogo dedicado a ti durante todo el bloque, queda en <strong>$83.360 de copago</strong>.</p>
     <div class="btns">
       <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener" class="btn-primary">Agendar evaluación →</a>
       <a href="https://wa.me/56996631822?text=Hola%2C%20tengo%20dudas%20sobre%20el%20bono%20Fonasa%20para%20kinesiolog%C3%ADa" target="_blank" rel="noopener" class="btn-outline">Consultar por WhatsApp</a>
+    </div>
+    <div class="trustbar">
+      <div><b>$83.360</b><span>copago · 10 sesiones</span></div>
+      <div><b>40 min · 1 a 1</b><span>un kinesiólogo por sesión</span></div>
+      <div><b>Bono acá mismo</b><span>sin ir a una sucursal</span></div>
+      <div><b>94 reseñas 5★</b><span>en Google</span></div>
     </div>
   </header>
 
   <section>
     <h2>Cómo usar tu bono Fonasa, paso a paso</h2>
-    <p>Si nunca has usado un bono para kinesiología, el trámite es más simple de lo que parece. Son cuatro pasos y <strong>el único que no depende de nosotros es el primero</strong>: el bono lo emitimos acá, en la misma consulta.</p>
+    <p>Si nunca has usado un bono para kinesiología, el trámite es más simple de lo que parece. Son cuatro momentos y <strong>el único que no depende de nosotros es el primero</strong>: el bono lo emitimos acá, en la misma consulta.</p>
     <div class="pasos">
       <div class="paso"><div>
-        <h3>Consigue tu orden médica</h3>
+        <p class="paso-k">Antes de venir</p><h3>Consigue tu orden médica</h3>
         <p>Para atenderte con bono necesitas una <strong>orden médica o interconsulta</strong> que indique kinesiología. La emite tu médico tratante: el de atención primaria, el traumatólogo o el especialista que te esté viendo.</p>
       </div></div>
       <div class="paso"><div>
-        <h3>Agenda tu hora</h3>
-        <p>Reserva online o por WhatsApp. La primera sesión es una <strong>evaluación kinésica</strong>: revisamos tu orden, tus informes o imágenes si los traes, y definimos objetivos medibles para tu proceso.</p>
+        <p class="paso-k">Al agendar</p><h3>Reserva y avisa que vienes con Fonasa</h3>
+        <p>Puedes reservar online o por WhatsApp. <strong>Dinos que vas a usar bono Fonasa</strong> al momento de agendar: así dejamos todo listo y no perdemos tiempo el día de tu sesión.</p>
       </div></div>
       <div class="paso"><div>
-        <h3>Compra el bono acá mismo</h3>
+        <p class="paso-k">El día de tu sesión</p><h3>Compras tu bono acá mismo</h3>
         <p><strong>No necesitas ir a una sucursal de Fonasa ni comprarlo por la app.</strong> El bono se emite en la consulta, el día de tu sesión. Llegas con tu orden médica y lo resolvemos en el momento.</p>
       </div></div>
       <div class="paso"><div>
-        <h3>Comienza tu plan</h3>
-        <p>A partir de ahí trabajamos con un plan de cargas progresivo, controlando la evolución sesión a sesión hasta los criterios de alta que definimos contigo al principio.</p>
+        <p class="paso-k">En tu primera sesión</p><h3>Evaluación y plan</h3>
+        <p>Conversamos sobre tu motivo de consulta y desde cuándo lo tienes. Hacemos la <strong>evaluación kinésica</strong>, definimos objetivos medibles y te explicamos el plan. Si tu caso lo permite, empezamos el tratamiento ese mismo día.</p>
       </div></div>
     </div>
   </section>
@@ -178,38 +200,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p>Estos son los valores vigentes a septiembre de 2026 para atención con bono Fonasa en Kinevic.</p>
     <div class="precio">
       <div class="precio-cifra">$83.360<span> de copago</span></div>
-      <p class="precio-detalle">Pack de 10 sesiones de kinesiología · 40 minutos cada una · atención 1 a 1</p>
+      <p class="precio-detalle">Pack de 10 sesiones de kinesiología · 40 minutos cada una · atención 1 a 1<br><span style="font-size:0.85rem;">≈ $8.336 por sesión</span></p>
       <p class="precio-alt">El pack de <strong>piso pélvico</strong>, de 10 sesiones de 1 hora, tiene el mismo copago de <strong>$83.360</strong>. La <strong>evaluación de piso pélvico</strong> cuesta $16.000, tanto con Fonasa como particular.</p>
     </div>
     <p style="margin-top:1.25rem;font-size:0.92rem;">El pack de 10 sesiones es el formato con el que planificamos y controlamos la progresión de tu proceso. En la evaluación inicial definimos objetivos medibles y ajustamos el número de sesiones a tu caso.</p>
   </section>
 
   <section>
-    <h2>Qué incluye la atención con Fonasa</h2>
-    <p>La cobertura no cambia cómo trabajamos. Un paciente Fonasa recibe exactamente el mismo proceso clínico que un paciente particular.</p>
+    <h2>¿Qué recibes por esos $83.360?</h2>
+    <p>No son diez sesiones sueltas. Es un proceso con evaluación, plan y criterios de alta.</p>
     <ul class="check">
-      <li><strong>Venta de bono en la misma consulta</strong>, sin vuelta a una sucursal de Fonasa.</li>
-      <li><strong>Evaluación kinésica inicial</strong>, incluida en el pack.</li>
-      <li><strong>Atención 1 a 1</strong> durante toda la sesión. Sin salas compartidas ni varios pacientes a la vez.</li>
-      <li><strong>Plan de cargas progresivo</strong>, con objetivos definidos en la primera sesión.</li>
-      <li><strong>Control de progresión</strong> y ajuste del plan según tu evolución.</li>
+      <li><strong>Una evaluación kinésica inicial</strong>, incluida en el pack.</li>
+      <li><strong>10 sesiones de 40 minutos</strong>, con un kinesiólogo dedicado a ti durante todo el bloque.</li>
+      <li><strong>Un plan de cargas</strong> con objetivos definidos en la primera sesión.</li>
+      <li><strong>Ejercicio terapéutico</strong> cuando corresponde a tu caso.</li>
+      <li><strong>Control de progresión</strong> sesión a sesión, con ajuste del plan según tu evolución.</li>
       <li><strong>Criterios de alta</strong> conversados contigo, para que sepas hacia dónde vas.</li>
       <li><strong>Educación</strong> para que puedas sostener los avances por tu cuenta.</li>
+      <li><strong>La venta del bono acá mismo</strong>, sin vuelta a una sucursal.</li>
     </ul>
+
+    <div class="destacado">
+      <h3>Tu cobertura cambia la forma de pago, no la atención que recibes</h3>
+      <p>Con bono Fonasa o de forma particular, el proceso es el mismo: la misma evaluación inicial, los mismos 40 minutos uno a uno, el mismo plan y los mismos criterios de alta. Lo único que cambia es cómo se paga.</p>
+    </div>
+
+    <div class="cta-inline">
+      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener" class="btn-primary">Agendar evaluación →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué significa «atención 1 a 1»</h2>
+    <p>Durante los 40 minutos de tu sesión, el kinesiólogo está contigo. No hay salas con varios pacientes rotando entre camillas, ni ejercicios que haces por tu cuenta mientras el profesional atiende a otra persona.</p>
+    <p>En la práctica eso significa tres cosas: <strong>las cargas se ajustan en el momento</strong> según cómo responde tu cuerpo ese día, <strong>las correcciones ocurren mientras te mueves</strong> y no después, y <strong>tus dudas se resuelven cuando aparecen</strong>. Es también la razón por la que trabajamos con horas reservadas y no por orden de llegada.</p>
   </section>
 
   <section>
     <h2>Qué atendemos con bono Fonasa</h2>
     <p>Estas son las áreas por las que más nos consultan pacientes Fonasa en Talca.</p>
-    <div class="cond">
-      <div>Dolor de columna<span>Cervical, dorsal y lumbar</span></div>
-      <div>Rehabilitación post-operatoria<span>Rodilla, hombro, cadera y columna</span></div>
-      <div>Lesiones deportivas<span>Rodilla, hombro, tobillo, tendinopatías</span></div>
-      <div>Piso pélvico<span>Incontinencia y disfunciones, en hombres y mujeres</span></div>
-      <div>Embarazo y postparto<span>Acompañamiento y recuperación funcional</span></div>
-      <div>Kinesiología respiratoria infantil<span>Bronquitis, asma y bronquiolitis</span></div>
-      <div>Rehabilitación cardíaca<span>Recuperación funcional supervisada</span></div>
-      <div>Adulto mayor<span>Autonomía, equilibrio y fuerza</span></div>
+    <div class="grupos">
+      <div class="grupo">
+        <p class="grupo-k">Músculo-esquelético y deportivo</p>
+        <p>Dolor de columna cervical, dorsal y lumbar · Lesiones deportivas de rodilla, hombro y tobillo · Tendinopatías y esguinces · Rehabilitación post-operatoria de rodilla, hombro, cadera y columna · Retorno progresivo al deporte</p>
+      </div>
+      <div class="grupo">
+        <p class="grupo-k">Piso pélvico y etapa perinatal</p>
+        <p>Incontinencia urinaria y disfunciones del suelo pélvico, en hombres y mujeres · Dolor pélvico · Acompañamiento en el embarazo · Recuperación funcional postparto y diástasis abdominal. <a href="/piso-pelvico-talca/" style="color:var(--teal-deeper);font-weight:700;">Ver piso pélvico en detalle →</a></p>
+      </div>
+      <div class="grupo">
+        <p class="grupo-k">Respiratorio, cardíaco y adulto mayor</p>
+        <p>Kinesiología respiratoria infantil: bronquitis, asma y bronquiolitis · Rehabilitación cardiovascular supervisada · Rehabilitación funcional del adulto mayor: autonomía, equilibrio y fuerza</p>
+      </div>
     </div>
     <p style="margin-top:1.5rem;font-size:0.95rem;">¿No ves tu caso? <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20consultar%20si%20mi%20caso%20se%20puede%20atender%20con%20Fonasa%20en%20Kinevic" target="_blank" rel="noopener" style="color:var(--teal-deeper);font-weight:700;">Escríbenos</a> y te orientamos sobre el tratamiento que corresponde.</p>
   </section>
@@ -258,6 +300,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </details>
 
     <details>
+      <summary>¿Cómo agendo mi hora?</summary>
+      <div class="ans">De dos formas: en la <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener">agenda online</a>, donde ves los bloques disponibles en tiempo real, o escribiéndonos por <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20kinesiolog%C3%ADa%20con%20bono%20Fonasa%20en%20Kinevic" target="_blank" rel="noopener">WhatsApp</a>. En cualquiera de las dos, avísanos que vienes con bono Fonasa.</div>
+    </details>
+
+    <details>
       <summary>¿Puedo cambiar de particular a Fonasa durante el proceso?</summary>
       <div class="ans">Sí. Si consigues la orden médica en medio de tu tratamiento, podemos continuar con bono desde ahí. Conversémoslo por <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20consultar%20por%20cambiar%20a%20bono%20Fonasa%20en%20mi%20tratamiento" target="_blank" rel="noopener">WhatsApp</a> y vemos cómo ordenarlo.</div>
     </details>
@@ -267,10 +314,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="cierre">
   <div class="cierre-inner">
     <h2>Agenda tu evaluación</h2>
-    <p style="margin-bottom:1.75rem;">Sal de la primera sesión con un diagnóstico kinésico, objetivos medibles y un plan de trabajo claro.</p>
+    <p style="margin-bottom:0.9rem;">Sal de la primera sesión con un diagnóstico kinésico, objetivos medibles y un plan de trabajo claro.</p>
+    <p style="margin-bottom:1.75rem;font-size:0.9rem;color:rgba(255,255,255,0.5);">★★★★★ 94 reseñas de 5 estrellas en Google · Calle 1 Norte 1209, Brisas del Centro, Talca</p>
     <div class="btns">
-      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener" class="btn-primary">Agendar hora online →</a>
-      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20kinesiolog%C3%ADa%20con%20bono%20Fonasa%20en%20Kinevic" target="_blank" rel="noopener" class="btn-outline" style="border-color:rgba(255,255,255,0.25);color:#fff;">WhatsApp directo</a>
+      <a href="https://agendaweb.salutem.cl/app/agenda-web/597E/kinevic/inicio" target="_blank" rel="noopener" class="btn-primary">Agendar evaluación →</a>
+      <a href="https://wa.me/56996631822?text=Hola%2C%20quiero%20agendar%20kinesiolog%C3%ADa%20con%20bono%20Fonasa%20en%20Kinevic" target="_blank" rel="noopener" class="btn-outline" style="border-color:rgba(255,255,255,0.25);color:#fff;">Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
@@ -340,6 +388,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "Question",
       "name": "¿Cuántas sesiones de kinesiología voy a necesitar?",
       "acceptedAnswer": { "@type": "Answer", "text": "Depende de tu lesión, del tiempo que llevas con ella y de tus objetivos. El pack de 10 sesiones es el formato con el que planificamos y controlamos la progresión; en la evaluación inicial definimos objetivos medibles y ajustamos el número de sesiones a tu caso." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo agendo hora de kinesiología con Fonasa en Kinevic?",
+      "acceptedAnswer": { "@type": "Answer", "text": "De dos formas: en la agenda online, donde ves los bloques disponibles en tiempo real, o escribiendo por WhatsApp al +56 9 9663 1822. En cualquiera de las dos, avisa que vienes con bono Fonasa." }
     },
     {
       "@type": "Question",
