@@ -152,6 +152,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .paso::before { width:36px; height:36px; font-size:0.82rem; }
     .destacado { padding:1.25rem 1.3rem; }
   }
+
+  /* ==========================================================================
+     ACCESIBILIDAD — WCAG 2.1 AA · 14-09-2026
+     Mismos criterios que la home. PARA REVERTIR: elimina este bloque completo.
+     ========================================================================== */
+  :root { --teal-ink:#1A6B79; --teal-ink-dark:#14565F; }
+  .btn-primary { background:var(--teal-ink) !important; box-shadow:0 4px 20px rgba(26,107,121,0.3); }
+  .btn-primary:hover { background:var(--teal-ink-dark) !important; }
+  .crumbs { color:#64707F !important; }
+  footer p { color:rgba(255,255,255,0.62) !important; }
+  .footer-desc { color:rgba(255,255,255,0.62) !important; font-size:0.72rem !important; letter-spacing:0.13em !important; }
+  .eyebrow, .dato-k, .grupo-k { font-size:0.72rem !important; letter-spacing:0.12em !important; }
+  thead th { font-size:0.72rem !important; letter-spacing:0.09em !important; }
+  .prof-ini { color:#1A6B79 !important; }
+
 </style>
 </head>
 <body>

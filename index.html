@@ -2496,7 +2496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <strong>Atendemos con Fonasa</strong>
     <span>Accede a rehabilitación kinesiológica de calidad en Talca con tu seguro de salud estatal.</span>
     <span style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.4rem;font-size:0.82rem;color:var(--teal);font-weight:700;">
-      <span style="background:var(--teal);color:#fff;border-radius:2px;padding:0.15rem 0.55rem;font-size:0.7rem;letter-spacing:0.08em;">COPAGO</span>
+      <span style="background:#1A6B79;color:#fff !important;border-radius:2px;padding:0.15rem 0.55rem;font-size:0.7rem;letter-spacing:0.08em;">COPAGO</span>
       $83.360 · 10 sesiones de kinesiología
     </span>
   </div>
@@ -2577,6 +2577,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .faq-item summary { font-size: 0.9rem; padding: 1.1rem 2.75rem 1.1rem 1.15rem; }
     .faq-answer { padding: 0 1.15rem 1.2rem; font-size: 0.88rem; }
   }
+
+  /* ==========================================================================
+     ACCESIBILIDAD — WCAG 2.1 AA · 14-09-2026
+     A. Teal legible sobre fondo claro   B. Pesos tipograficos reales
+     C. Ningun texto bajo 12px           E. Grises con contraste suficiente
+     F. Color del icono de servicio
+     El teal claro (#5BB8C4) se conserva sobre fondo oscuro, en bordes,
+     rellenos y elementos decorativos: ahi si cumple.
+     PARA REVERTIR: elimina este bloque completo.
+     ========================================================================== */
+  :root { --teal-ink:#1A6B79; --teal-ink-dark:#14565F; --gray:#737373; }
+
+  /* --- A · teal como FONDO, con texto blanco encima --- */
+  .btn-primary,
+  .servicios-cta-btn,
+  .plan-tag-top,
+  .atleta-badge,
+  .atleta-cta,
+  .ba-label--teal,
+  .plan-card.featured .btn-plan,
+  .plan-card--clinico .btn-plan,
+  .btn-plan:hover,
+  .badge:hover { background:var(--teal-ink) !important; border-color:var(--teal-ink) !important; color:#fff !important; }
+  .btn-primary:hover,
+  .servicios-cta-btn:hover,
+  .atleta-cta:hover,
+  .plan-card--clinico .btn-plan:hover { background:var(--teal-ink-dark) !important; }
+
+  /* --- A · teal como TEXTO sobre fondo claro --- */
+  h1 em,
+  .hero-tag,
+  .badge,
+  .brand-descriptor,
+  .case-author,
+  .btn-white,
+  .atleta-disciplina,
+  .atleta-check { color:var(--teal-ink) !important; }
+  .badge { border-color:var(--teal-ink) !important; }
+  /* eyebrow solo en secciones claras; en las oscuras y en #agendar (degradado teal)
+     el color original ya cumple y se conserva */
+  #equipo .section-tag,
+  #centro .section-tag,
+  #casos .section-tag,
+  #deportistas .section-tag,
+  #faq .section-tag { color:var(--teal-ink) !important; }
+  .hero-tag { border-color:rgba(26,107,121,0.3) !important; }
+  .hero-tag::before { background:var(--teal-ink) !important; }
+  .atleta-check::before { color:var(--teal-ink) !important; }
+  .case-quote::before { color:var(--teal-ink) !important; }
+
+  /* --- B · solo pesos que se descargan: Lato 300/400/700 · Montserrat 400/700/800 --- */
+  h1 { font-weight:800 !important; }
+  .hero-card-benefit,
+  .equipo-subtitle-top { font-weight:400 !important; }
+  .btn-plan,
+  .ba-item figcaption,
+  .centro-benefit,
+  .centro-benefit span,
+  .footer-badge,
+  .footer-logo-tagline,
+  .nav-logo-tagline,
+  .plan-freqnote,
+  .atleta-badge,
+  .ba-label { font-weight:700 !important; }
+
+  /* --- C · minimo 12px, con menos letter-spacing en los rotulos en mayusculas --- */
+  .plan-tag-top { font-size:0.7rem !important; letter-spacing:0.08em !important; }
+  .footer-logo-tagline { font-size:0.7rem !important; letter-spacing:0.12em !important; }
+  .footer-logo-descriptor { font-size:0.7rem !important; letter-spacing:0.13em !important; }
+  .ba-label { font-size:0.72rem !important; letter-spacing:0.08em !important; }
+  .atleta-badge { font-size:0.72rem !important; letter-spacing:0.09em !important; }
+  .planes-sub-label { font-size:0.72rem !important; letter-spacing:0.13em !important; }
+  .brand-descriptor { font-size:0.72rem !important; letter-spacing:0.14em !important; }
+  .faq-precios thead th { font-size:0.72rem !important; letter-spacing:0.08em !important; }
+  .caso-javier-tag { font-size:0.72rem !important; }
+
+  /* --- E · grises legibles --- */
+  .footer-text,
+  .footer-bottom .footer-text { color:rgba(255,255,255,0.62) !important; }
+  .footer-logo-descriptor { color:rgba(255,255,255,0.62) !important; }
+  .servicios-all-label { color:rgba(255,255,255,0.62) !important; }
+
+  /* --- F · el icono de servicio heredaba #1C1C1C sobre fondo casi negro --- */
+  .service-icon { color:var(--teal) !important; }
+
 </style>
 <section id="faq">
   <p class="section-tag reveal">Resolvemos tus dudas</p>
