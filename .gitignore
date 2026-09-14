@@ -1,0 +1,6 @@
+# Archivos que Claude entrega en el chat: no forman parte del sitio publicado
+Claude outputs/
+
+# Sistema
+.DS_Store
+Thumbs.db
